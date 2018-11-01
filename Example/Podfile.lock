@@ -1,0 +1,16 @@
+PODS:
+  - Rounded (0.1.0)
+
+DEPENDENCIES:
+  - Rounded (from `../`)
+
+EXTERNAL SOURCES:
+  Rounded:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  Rounded: be8e565870cfc24b2e71868a09f952a62f490d53
+
+PODFILE CHECKSUM: ad8a120848a5b598692b7dfa75aa26a13b1fa557
+
+COCOAPODS: 1.5.3

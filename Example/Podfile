@@ -1,0 +1,9 @@
+use_frameworks!
+
+target 'Rounded_Example' do
+  pod 'Rounded', :path => '../'
+
+  target 'Rounded_Tests' do
+    inherit! :search_paths
+  end
+end
