@@ -20,6 +20,20 @@ it, simply add the following line to your Podfile:
 pod 'Rounded'
 ```
 
+## Screenshots
+
+
+<p align="center">
+<img src="./Screenshots/ScreenShot1.png" width="350"/>
+</p>
+
+
+
+<p align="center">
+<img src="./Screenshots/ScreenShot2.png" width="350"/>
+</p>
+
+
 ## Author
 
 serhii-londar, serhii.londar@gmail.com
