@@ -24,9 +24,12 @@ import UIKit
     override open var bounds: CGRect {
         didSet { updateCorderRadius() }
     }
-    @IBInspectable open var insets: UIEdgeInsets = UIEdgeInsets.init(top: 0, left: 0, bottom: 0, right: 0) {
+    @IBInspectable open var insets: UIEdgeInsets = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0) {
         didSet {
-            self.drawText(in: CGRect(x: self.frame.origin.x, y: self.frame.origin.y, width: self.frame.size.width + self.insets.left + self.insets.right, height: self.frame.size.height + self.insets.top + self.insets.bottom))
+            let origin = self.frame.origin
+            let width = self.frame.size.width + self.insets.left + self.insets.right
+            let height = self.frame.size.height + self.insets.top + self.insets.bottom
+            self.drawText(in: CGRect(x: origin.x, y: origin.y, width: width, height: height))
         }
     }
     override open func drawText(in rect: CGRect) {
@@ -34,8 +37,8 @@ import UIKit
     }
     override open var intrinsicContentSize: CGSize {
         var size = super.intrinsicContentSize
-        size.width = size.width + self.insets.left + self.insets.right
-        size.height = size.height + self.insets.top + self.insets.bottom
+        size.width += self.insets.left + self.insets.right
+        size.height += self.insets.top + self.insets.bottom
         return size
     }
 }
